@@ -1,0 +1,48 @@
+# ── Core framework ────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12    # multipart file uploads
+
+# ── Async & concurrency ───────────────────────────────────────────────────
+anyio==4.6.2
+httpx==0.27.2               # async HTTP client (testing)
+
+# ── Data validation ───────────────────────────────────────────────────────
+pydantic==2.9.2
+pydantic-settings==2.6.1
+email-validator==2.2.0
+
+# ── Database — PostgreSQL ─────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0             # async PostgreSQL driver
+alembic==1.14.0             # database migrations
+
+# ── Database — MongoDB ────────────────────────────────────────────────────
+motor==3.6.0                # async MongoDB driver
+pymongo==4.9.2
+
+# ── Cache / Queue ─────────────────────────────────────────────────────────
+redis[hiredis]==5.2.0       # async Redis client
+celery[redis]==5.4.0        # async task queue
+flower==2.0.1               # Celery monitoring UI
+
+# ── Security ─────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0    # JWT
+bcrypt==4.2.0                       # password hashing
+passlib[bcrypt]==1.7.4
+
+# ── Image processing ─────────────────────────────────────────────────────
+Pillow==11.0.0
+numpy==2.1.3
+
+# ── Logging ──────────────────────────────────────────────────────────────
+structlog==24.4.0
+
+# ── Testing ──────────────────────────────────────────────────────────────
+pytest==8.3.3
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+httpx==0.27.2               # for TestClient
+
+# ── Dev tools ─────────────────────────────────────────────────────────────
+python-dotenv==1.0.1

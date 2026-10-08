@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">AI Privacy Shield architecture</title>
+  <desc id="desc">A client sends an authenticated request to a FastAPI application, which validates and processes an image, stores files locally, and can connect to PostgreSQL, MongoDB, and Redis.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a35"/>
+      <stop offset="1" stop-color="#19294a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#68e0cf"/>
+      <stop offset="1" stop-color="#79a9ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#82a9d8"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#071126" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="460" rx="26" fill="url(#bg)"/>
+  <circle cx="1080" cy="54" r="170" fill="#3b78a8" opacity=".08"/>
+  <circle cx="120" cy="430" r="210" fill="#50d4c0" opacity=".06"/>
+  <text x="56" y="62" fill="#f3f7ff" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700">AI PRIVACY SHIELD</text>
+  <text x="56" y="92" fill="#a9b9d4" font-family="Segoe UI,Arial,sans-serif" font-size="15">Experimental image-protection API · request and data flow</text>
+  <g filter="url(#shadow)" font-family="Segoe UI,Arial,sans-serif">
+    <rect x="54" y="178" width="190" height="116" rx="18" fill="#202f50" stroke="#53698f"/>
+    <circle cx="91" cy="216" r="16" fill="#254f69"/>
+    <path d="M84 216h14M91 209v14" stroke="#70e3d2" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="78" y="254" fill="#f3f7ff" font-size="18" font-weight="700">Client</text>
+    <text x="78" y="278" fill="#a9b9d4" font-size="13">REST · bearer JWT</text>
+
+    <rect x="322" y="154" width="230" height="164" rx="18" fill="#20385a" stroke="#4e83a0"/>
+    <rect x="344" y="176" width="42" height="7" rx="4" fill="url(#accent)"/>
+    <text x="344" y="218" fill="#f3f7ff" font-size="19" font-weight="700">FastAPI</text>
+    <text x="344" y="245" fill="#b8c9df" font-size="13">Auth · uploads · processing</text>
+    <text x="344" y="267" fill="#b8c9df" font-size="13">Rate limits · reports · health</text>
+    <text x="344" y="292" fill="#7fe2d4" font-size="12">Synchronous HTTP pipeline</text>
+
+    <rect x="635" y="154" width="256" height="164" rx="18" fill="#20385a" stroke="#4e83a0"/>
+    <rect x="657" y="176" width="42" height="7" rx="4" fill="url(#accent)"/>
+    <text x="657" y="218" fill="#f3f7ff" font-size="19" font-weight="700">Image pipeline</text>
+    <text x="657" y="245" fill="#b8c9df" font-size="13">Surrogate perturbations</text>
+    <text x="657" y="267" fill="#b8c9df" font-size="13">DCT watermark · heuristics</text>
+    <text x="657" y="292" fill="#ffcf83" font-size="12">Experimental estimates only</text>
+
+    <rect x="978" y="125" width="168" height="76" rx="15" fill="#253a58" stroke="#506987"/>
+    <text x="1000" y="159" fill="#f3f7ff" font-size="16" font-weight="700">PostgreSQL</text>
+    <text x="1000" y="182" fill="#a9b9d4" font-size="12">Accounts · jobs</text>
+    <rect x="978" y="218" width="168" height="76" rx="15" fill="#253a58" stroke="#506987"/>
+    <text x="1000" y="252" fill="#f3f7ff" font-size="16" font-weight="700">MongoDB</text>
+    <text x="1000" y="275" fill="#a9b9d4" font-size="12">Optional documents</text>
+    <rect x="978" y="311" width="168" height="76" rx="15" fill="#253a58" stroke="#506987"/>
+    <text x="1000" y="345" fill="#f3f7ff" font-size="16" font-weight="700">Redis</text>
+    <text x="1000" y="368" fill="#a9b9d4" font-size="12">Optional rate limits</text>
+  </g>
+  <g fill="none" stroke="#82a9d8" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M244 236H314"/>
+    <path d="M552 236H627"/>
+    <path d="M891 196C925 196 932 163 970 163"/>
+    <path d="M891 236H970"/>
+    <path d="M891 276C925 276 932 349 970 349"/>
+  </g>
+  <text x="56" y="410" fill="#8398b8" font-family="Segoe UI,Arial,sans-serif" font-size="12">Uploaded and generated image files are stored in local directories or Docker volumes.</text>
+</svg>
